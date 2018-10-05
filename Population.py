@@ -10,20 +10,42 @@ the course of 5 years """
 import datetime
 
 # Adding today
-startDate = datetime.date.today()
-endDate = startDate
-endDate += datetime.timedelta(4)
+weeks = datetime.timedelta(weeks=1)
+
 
 # Define Functions for
-def organismA():
-    startingPopulation = 50
+def organism_a():
+     while (weeks != 260):
+
+        population = 50
+        weeks = 0
+
+        if weeks == 4:
+            population * 2
+
+        elif weeks == 2:
+            population *.25
+
+        elif weeks == 260:
+            print(population)
+
+        else:
+            weeks += 1
 
 
-def organismB():
+
+
+
+
+#def organismB():
     startingPopulation = 250
 
-def organismC():
+#def organismC():
     StartingPopulation = 1000
 
 
-print(startDate)
+#print(startDate)
+
+
+# main
+organism_a()
