@@ -14,23 +14,27 @@ WEEK = datetime.timedelta(weeks=1)
 
 
 # Define Functions for
-def organism_a():
-     #while weeks != 260:
+#def organism_a(population, weeks):
 
-    population = 50
-    weeks = 0
+population = 50
+weeks = 0
 
-    if weeks != 4:
-        (population * 2)
+if weeks < 4:
 
-    elif weeks < 2:
-        population *.25
+    population = population * 2
 
-    elif weeks == 260:
-        print(population)
 
-    else:
-        weeks += 1
+elif weeks < 2:
+    population = population *.25
+
+elif weeks == 260:
+    print(population)
+
+else:
+    weeks += 1
+    print(weeks)
+
+    #return (population,weeks)
 
 
 
@@ -50,4 +54,4 @@ def organism_a():
 
 
 # main
-#organism_a()
+#organism_a(50,10)
