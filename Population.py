@@ -20,17 +20,19 @@ def organism_a():
     population = 50
     weeks = 0
 
-    if weeks != 4:
-        (population * 2)
+     while weeks < 4:
 
-    elif weeks < 2:
-        population *.25
+        if weeks != 4:
+            (population * 2)
 
-    elif weeks == 260:
-        print(population)
+        elif weeks < 2:
+            population *.25
 
-    else:
-        weeks += 1
+        elif weeks == 260:
+            print(population)
+
+        else:
+            weeks += 1
 
 
 

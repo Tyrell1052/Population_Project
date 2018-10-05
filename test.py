@@ -19,18 +19,20 @@ WEEK = datetime.timedelta(weeks=1)
 population = 50
 weeks = 0
 
-if weeks < 4:
+while weeks < 4:
 
-    population = population * 2
+    if weeks < 4:
+
+        population = population * 2
 
 
-elif weeks < 2:
-    population = population *.25
+    elif weeks < 2:
+        population = population *.25
 
-elif weeks == 260:
-    print(population)
+    else:
+        weeks == 260
+        print(population)
 
-else:
     weeks += 1
     print(weeks)
 
