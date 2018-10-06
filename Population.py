@@ -10,46 +10,35 @@ the course of 5 years """
 import datetime
 
 # Adding today
-WEEK = datetime.timedelta(weeks=1)
+#WEEK = datetime.timedelta(weeks=1)
 
 
 # Define Functions for
-def organism_a():
-     #while weeks != 260:
+# Display headers for table
+print("%4s%6s%12s%22s" %
+      ("Organism A:", "Week", "Population", "1 million organisms",))
 
-    population = 50
-    weeks = 0
+population_a = 50
+weeks_a = 0
+weeks_in_years_a = 0
 
-     while weeks < 4:
+print("%10s%15s" %
+      (weeks_in_years_a, population_a))
 
-        if weeks != 4:
-            (population * 2)
-
-        elif weeks < 2:
-            population *.25
-
-        elif weeks == 260:
-            print(population)
-
-        else:
-            weeks += 1
-
-
-
-
-
-
-
-
-#def organismB():
-#    population = 250
-
-#def organismC():
-#    population = 1000
+while weeks_in_years_a < 260:
+    print(weeks_a, weeks_in_years_a)
+    if weeks_a == 2:
+        population_a = population_a - (population_a * .25)
+        print(population_a)
+    elif weeks_a == 4:
+        population_a = population_a * 2
+        print(population_a)
+        weeks_a = 0
+    elif population_a > 1000000:
+        print("Organism A will take",weeks_in_years_a,"weeks to reach 1 million organisms")
+        break
+    weeks_a += 1
+    weeks_in_years_a += 1
 
 
-#print(startDate)
 
-
-# main
-#organism_a()
