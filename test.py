@@ -1,37 +1,76 @@
+""""
+Program: Population.py
+Author: Tyrell Robbins
+This program will Simulate the life cycle of 3 Organisms
+based on growth rates, death rates and predictions over
+the course of 5 years """
+
+
+# Define Functions for
+# Display headers for table
 
 
 def organism_a():
-    print("%4s%6s%12s" %
-          ("Organism A:", "Week", "Population",))
+    print("%4s%14s" %
+          ("Week:", "Organism A:"))
 
     population = 50
     weeks = 0
     total_weeks = 0
 
-
-   # print("%14s%15s" %
-          #(total_weeks, population))
-
     while total_weeks < 260:
-        print("%14s%10s" %
-              (total_weeks, population))
+
         if weeks == 2:
             population = population - (population * .25)
-            print(population)
+
         elif weeks == 4:
             population = population * 2
+            print("%12s" % format(population, ".0f"))
             weeks = 0
-
         elif population > 1000000:
             print("Organism A will take", total_weeks, "weeks to reach 1 million organisms.")
             break
-
         elif population == 0:
             print("Organism A will take", total_weeks, "weeks until species reaches 0 organisms. ")
             break
-
         weeks += 1
         total_weeks += 1
 
+        print("%0s" % total_weeks)
+ #---------------------------------------------------------------------------------------
 
-organism_a()
+def organism_b():
+
+    print("%4s%14s" %
+          ("Week:", "Organism B:"))
+
+    population = 250
+    weeks = 0
+    total_weeks = 0
+
+    while total_weeks < 260:
+
+        if weeks == 2:
+            population = population - (population * .25)
+
+        elif weeks == 4:
+            population = population * 3
+            print("%12s" % format(population, ".0f"))
+            weeks = 0
+        elif population > 1000000:
+            print("Organism B will take", total_weeks, "weeks to reach 1 million organisms.")
+            break
+        elif population < 0:
+            print("Organism B will take", total_weeks, "weeks until species reaches 0 organisms. ")
+            break
+        weeks += 1
+        total_weeks += 1
+
+        print("%0s" % total_weeks)
+
+
+
+
+
+
+print(organism_a(),organism_b())
