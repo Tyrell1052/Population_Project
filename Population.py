@@ -12,7 +12,7 @@ the course of 5 years """
 
 def organism_a():
     print("%4s%14s" %
-          ("Week:", "Organism A:"))
+          ("Year:", "Organism A:"))
 
     population = 50
     weeks = 0

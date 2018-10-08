@@ -26,12 +26,14 @@ def organism_a():
         else:
             break
 
-        if weeks == 2:
+        if weeks == 2 or 4:
             population = population - (population * .25)
+
 
         elif weeks == 4:
             population = population * 2
-            print("%12s" % format(population, ".0f"))
+            #print("%12s" % format(population, ".0f"))
+            weeks = 0
 
 
         elif population > 1000000:
@@ -41,6 +43,7 @@ def organism_a():
         elif population == 0:
             print("Organism A will take", total_weeks, "weeks until species reaches 0 organisms. ")
             break
+
         weeks += 1
         total_weeks += 1
 
