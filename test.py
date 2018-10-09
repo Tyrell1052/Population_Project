@@ -6,78 +6,54 @@ based on growth rates, death rates and predictions over
 the course of 5 years """
 
 
-# Define Functions for
 # Display headers for table
 
-
+# define Organism A in a function
 def organism_a():
+    # Display headers for table
     print("%4s%14s" %
           ("Year:", "Organism A:"))
-
+    # starting variables for population, weeks and total_weeks
     population = 50
     weeks = 0
     total_weeks = 0
-    year = 0
-
+    # this will start the while loop to run until total_weeks is <= 260 weeks (5 years if counted in weeks)
     while total_weeks <= 260:
 
-        if total_weeks == 52 or 104 or 156 or 208 or 260:
-            year += 1
-        else:
-            break
-
-        if weeks == 2 or 4:
+        if weeks == 2:  # this if statement handles the decrease by 25% every two weeks
             population = population - (population * .25)
-            #print(population)
 
-        elif weeks == 4:
+        elif weeks == 4:  # this is for when weeks == 4 the population will increase
+            population = population - (population * .25)
             population = population * 2
+            #print(population)
             #print("%12s" % format(population, ".0f"))
-            weeks = 0
-            print(population)
+            weeks = 0  #this sets weeks back to 0 so when the loop continues to go through it can decrease and increase the population
 
-
-        elif population > 1000000:
+        elif population > 1000000:  # this will print only if the population is greater then 1000000
             print("Organism A will take", total_weeks, "weeks to reach 1 million organisms.")
             break
-
-        elif population == 0:
+        elif population < 0:  # this will print if the population is less than 0
             print("Organism A will take", total_weeks, "weeks until species reaches 0 organisms. ")
             break
+        print(population)
+        weeks += 1  # this adds 1 to weeks each time the while loop iterates
+        total_weeks += 1  # this adds 1 to weeks each time the while loop iterates
 
-        weeks += 1
-        total_weeks += 1
+        #print("%0s" % total_weeks)
 
-        if year <= 5:
-            print("%0s" % year)
-        else:
-            break
-
-        if year == 1 or 2 or 3 or 4 or 5 :
-            print(population)
-            #print("%12s" % format(population, ".0f"))
-        else:
-            pass
-
-        #print("%0s" % year)
  #---------------------------------------------------------------------------------------
 
 def organism_b():
 
     print("%4s%14s" %
-          ("Year:", "Organism B:"))
+          ("Week:", "Organism B:"))
 
     population = 250
     weeks = 0
     total_weeks = 0
-    year = 0
 
     while total_weeks < 260:
-
-        if total_weeks == 52 or 104 or 156 or 208 or 260:
-            year += 1
-        else:
-            break
 
         if weeks == 2:
             population = population - (population * .25)
@@ -86,23 +62,16 @@ def organism_b():
             population = population * 3
             print("%12s" % format(population, ".0f"))
             weeks = 0
-
         elif population > 1000000:
             print("Organism B will take", total_weeks, "weeks to reach 1 million organisms.")
             break
-
         elif population < 0:
             print("Organism B will take", total_weeks, "weeks until species reaches 0 organisms. ")
             break
         weeks += 1
         total_weeks += 1
 
-        if year <= 5:
-            print("%0s" % year)
-        else:
-            break
-
-        #print("%0s" % total_weeks)
+        print("%0s" % total_weeks)
 
 
 
