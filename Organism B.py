@@ -14,7 +14,7 @@ def organism_b():
 
             if week_counter % 4 == 0:  # this is for when weeks == 4 the population will increase
                 population = population * 3
-                week_counter += 1
+
 
         if population > 1000000 or population < 1:
             print("Organism B will reach", format(population, ".0f"), "by week", week_counter)
