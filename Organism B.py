@@ -12,7 +12,6 @@ def organism_b():
             population = population - (population * .25)
             week_counter += 1
 
-
             if week_counter % 4 == 0:  # this is for when weeks == 4 the population will increase
                 population = population * 3
                 week_counter += 1

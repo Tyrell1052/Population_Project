@@ -5,7 +5,8 @@ def organism_a():
     population = 50
     week_counter = 0
 
-    # this will start the while loop to run until total_weeks is <= 260 weeks (5 years if counted in weeks)
+    # this will start the while loop to run until weeks_counter is <= 260 weeks
+    # (5 years if counted in weeks)
     while week_counter <= 260:
 
         if week_counter % 2 == 0:  # this if statement handles the decrease by 25% every two weeks
