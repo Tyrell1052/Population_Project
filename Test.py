@@ -2,8 +2,7 @@ def organism_b():
     # declaring population and week_counter variables
     population = 250
     week_counter = 0
-    year_1 = 52
-    year_2 = 104
+    year = 0
 
 
 
@@ -20,7 +19,13 @@ def organism_b():
                 week_counter += 1
 
         if week_counter == 52 or 104 or 156 or 208 or 260:
-            print(population, "at", week_counter)
+            year += 1
+
+        if year == 1 or 2 or 3 or 4 or 5:
+            print("Organisms population", population, "at year", year)
+
+        if year == 5:
+            break
 
         if population > 1000000 or population < 1:
             print("Organism B will reach", format(population, ".0f"), "by week", week_counter)
