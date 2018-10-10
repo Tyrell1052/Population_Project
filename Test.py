@@ -5,8 +5,6 @@ def organism_b():
     year = 0
 
 
-
-
     # this will start the while loop to run until total_weeks is <= 260 weeks (5 years if counted in weeks)
     while week_counter <= 260:
 
