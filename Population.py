@@ -21,10 +21,10 @@ def organism_a():
 
             if week_counter % 4 == 0:  # this is for when weeks == 4 the population will increase
                 population = population * 2
-
+        # this if statement will print years 1 to 5 and the population for each.
         if week_counter == 52 or week_counter == 104 or week_counter == 156 or week_counter == 208 or week_counter ==260:
             print("Organisms A population", format(population, ".0f"), "at year", week_counter // 52)
-
+        # this if statement will print the populations and weeks if the organism either reaches 1 million or die out
         if population > 1000000 or population < 1:
             print("Organism A will reach", format(population, ".0f"), "by week", week_counter)
             break
@@ -47,10 +47,10 @@ def organism_b():
 
             if week_counter % 4 == 0:  # this is for when weeks == 4 the population will increase
                 population = population * 3
-
+        # this if statement will print years 1 to 5 and the population for each.
         if week_counter == 52 or week_counter == 104 or week_counter == 156 or week_counter == 208 or week_counter ==260:
             print("Organisms B population", format(population, ".0f"), "at year", week_counter // 52)
-
+        # this if statement will print the populations and weeks if the organism either reaches 1 million or die out
         if population > 1000000 or population < 1:
             print("Organism B will reach", format(population, ".0f"), "by week", week_counter)
             break
@@ -73,10 +73,10 @@ def organism_c():
 
             if week_counter % 4 == 0:  # this is for when weeks == 4 the population will increase
                 population = population + (population * .75)
-
+        # this if statement will print years 1 to 5 and the population for each.
         if week_counter == 52 or week_counter == 104 or week_counter == 156 or week_counter == 208 or week_counter ==260:
             print("Organisms C population", format(population, ".0f"), "at year", week_counter // 52)
-
+        # this if statement will print the populations and weeks if the organism either reaches 1 million or die out
         if population > 1000000 or population < 1:
             print("Organism C will reach", format(population, ".0f"), "by week", week_counter)
             break
