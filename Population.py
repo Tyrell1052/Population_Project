@@ -66,7 +66,7 @@ def organism_c():
     week_counter = 0
 
     # this will start the while loop to run until total_weeks is <= 260 weeks (5 years if counted in weeks)
-    while week_counter <= 260:
+    while week_counter <= 1040:
         week_counter += 1
         if week_counter % 1 == 0:  # this if statement handles the decrease by 25% every two weeks
             population = population - (population * .13)
@@ -74,7 +74,11 @@ def organism_c():
             if week_counter % 4 == 0:  # this is for when weeks == 4 the population will increase
                 population = population + (population * .75)
         # this if statement will print years 1 to 5 and the population for each.
-        if week_counter == 52 or week_counter == 104 or week_counter == 156 or week_counter == 208 or week_counter ==260:
+        if week_counter == 52 or week_counter == 104 or week_counter == 156 or week_counter == 208 \
+                or week_counter == 260 or week_counter == 312 or week_counter == 364 or week_counter == 416 \
+                or week_counter == 468 or week_counter == 520 or week_counter == 624 or week_counter == 676 \
+                or week_counter == 728 or week_counter == 780 or week_counter == 832 or week_counter == 884 \
+                or week_counter == 936 or week_counter == 936 or week_counter == 988 or week_counter == 1040:
             print("Organisms C population", format(population, ".0f"), "at year", week_counter // 52)
         # this if statement will print the populations and weeks if the organism either reaches 1 million or die out
         if population > 1000000 or population < 1:
