@@ -12,14 +12,15 @@ def organism_a():
         if week_counter % 2 == 0:  # this if statement handles the decrease by 25% every two weeks
             population = population - (population * .25)
 
-
             if week_counter % 4 == 0:  # this is for when weeks == 4 the population will increase
                 population = population * 2
 
+        if week_counter == 52 or week_counter == 104 or week_counter == 156 or week_counter == 208 or week_counter ==260:
+            print("Organisms population", format(population, ".0f"), "at year", week_counter // 52)
 
         if population > 1000000 or population < 1:
             print("Organism A will reach", format(population, ".0f"), "by week", week_counter)
             break
-    print(population)
+
 
 organism_a()
